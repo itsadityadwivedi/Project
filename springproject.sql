@@ -1,31 +1,14 @@
--- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Apr 10, 2022 at 06:02 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+create database springproject;
+use springproject;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+select * from users;
 
-
---
--- Database: `springproject`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `categories`
---
-
-CREATE TABLE `categories` (
+ALTER TABLE products MODIFY COLUMN image text;
+products_ibfk_1
+CREATE TABLE `categories` (image
   `categoryid` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;image
 
 --
 -- Dumping data for table `categories`
@@ -165,6 +148,4 @@ CHANGE COLUMN `role` `role` VARCHAR(250) NULL;
 
 ALTER TABLE `users` CHANGE COLUMN `role` `role` VARCHAR(250) NOT NULL DEFAULT 'ROLE_USERS';
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
